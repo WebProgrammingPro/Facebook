@@ -13,7 +13,7 @@ export async function PATCH(req: Request, context: contextProps) {
     if (!postId)
       return Response.json({ message: "Not Post ID" }, { status: 500 });
 
-    await db.post.update({
+    const moveToTrash = await db.post.update({
       where: { id: postId },
       data: {
         deletedAt: new Date(),
@@ -22,7 +22,7 @@ export async function PATCH(req: Request, context: contextProps) {
     });
 
     return Response.json(
-      { message: "Move To Trash Post Successfully" },
+      { message: "Move To Trash Post Successfully", post: moveToTrash },
       { status: 200 }
     );
   } catch (error) {

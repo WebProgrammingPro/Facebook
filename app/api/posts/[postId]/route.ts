@@ -22,7 +22,7 @@ export async function PATCH(req: Request, context: contextProps) {
 
     const { audience, content } = validatedFields.data;
 
-    await db.post.update({
+    const updatedPost = await db.post.update({
       where: { id: postId },
       data: {
         audience,
@@ -32,7 +32,7 @@ export async function PATCH(req: Request, context: contextProps) {
     });
 
     return Response.json(
-      { message: "Updated Post Successfully" },
+      { message: "Updated Post Successfully", post: updatedPost },
       { status: 200 }
     );
   } catch (error) {

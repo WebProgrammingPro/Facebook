@@ -55,7 +55,7 @@ const PostCard = ({ post }: PostCardProps) => {
                 <span className="text-xs">20 Comments</span>
               </div>
               <PostButton post={post} setShowComments={setShowComments} />
-              {showComments && <CommentsFeed postId={post.id} />}
+              {showComments && <CommentsFeed post={post} />}
             </div>
           </CardFooter>
         </Card>

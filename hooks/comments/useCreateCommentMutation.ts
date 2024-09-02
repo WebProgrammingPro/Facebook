@@ -5,11 +5,9 @@ import axios from "@/lib/axios";
 import { FormInputCommentValues } from "@/schemas";
 
 const createCommentApi = async (values: FormInputCommentValues) => {
-  // const { data } = await axios.post("/comments", values);
+  const { data } = await axios.post("/comments", values);
 
-  console.log(values)
-
-  // return data;
+  return data;
 };
 
 export function useCreateCommentMutation() {

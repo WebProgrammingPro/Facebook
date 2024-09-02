@@ -30,6 +30,7 @@ const CommentsFeed = ({ post }: CommentsFeedProps) => {
             user={userCurrent}
             onSubmit={handleCreateComment}
             isEditing={false}
+            initialValue={{ postId: post.id }}
           />
         </div>
       </div>

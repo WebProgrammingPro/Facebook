@@ -26,18 +26,26 @@ export async function PATCH(req: Request, context: contextProps) {
 
     const existingBookmark = await getBookmarkByPostId(postId);
     if (!existingBookmark) {
-      await db.bookmark.create({
+      const bookmarkSave = await db.bookmark.create({
         data: {
           post: { connect: { id: postId } },
           user: { connect: { id: userCurrent?.id } },
         },
       });
 
-      return Response.json({ message: "Saved to For Later" }, { status: 200 });
+      return Response.json(
+        { message: "Saved to For Later", post: bookmarkSave },
+        { status: 200 }
+      );
     } else {
-      await db.bookmark.delete({ where: { id: existingBookmark.id } });
+      const bookmarkSave = await db.bookmark.delete({
+        where: { id: existingBookmark.id },
+      });
 
-      return Response.json({ message: "Unsaved" }, { status: 200 });
+      return Response.json(
+        { message: "Unsaved", post: bookmarkSave },
+        { status: 200 }
+      );
     }
   } catch (error) {
     return Response.json({ message: "Could Not Fetch Posts" }, { status: 500 });

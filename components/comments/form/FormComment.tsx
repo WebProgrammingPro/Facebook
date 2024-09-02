@@ -18,7 +18,7 @@ interface FormCommentProps {
   user?: ExtendedUser;
   onSubmit: SubmitHandler<FormInputCommentValues>;
   isEditing: boolean;
-  initialValue?: CommentData;
+  initialValue?: CommentData | { postId: string };
 }
 
 const FormComment = ({
