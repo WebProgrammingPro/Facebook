@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-import { editPostAction } from "@/actions/posts/Button/editPostAction";
+import { editPostAction } from "@/actions/posts/editPostAction";
 
 export function useEditPostMutation() {
   const queryClient = useQueryClient();

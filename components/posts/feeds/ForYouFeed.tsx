@@ -3,18 +3,20 @@
 import useGetPostsQuery from "@/hooks/posts/useGetPostsQuery";
 
 import PostsLoadingSkeleton from "@/components/PostsLoadingSkeleton";
-import NotFoundPost from "./NotFoundPost";
 import PostCard from "../card/PostCard";
+import NotFoundPost from "./NotFoundPost";
 
 const ForYouFeed = () => {
   const { data, isLoading } = useGetPostsQuery();
 
   if (isLoading) {
-    <div className="space-y-5">
-      <PostsLoadingSkeleton />
-      <PostsLoadingSkeleton />
-      <PostsLoadingSkeleton />
-    </div>;
+    return (
+      <div className="space-y-4">
+        <PostsLoadingSkeleton />
+        <PostsLoadingSkeleton />
+        <PostsLoadingSkeleton />
+      </div>
+    );
   }
 
   return (

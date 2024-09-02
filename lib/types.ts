@@ -17,6 +17,7 @@ export interface PostData {
   audience: string;
   content: string;
   userId: string;
+  isTrashed: boolean;
 
   user?: ExtendedUser;
   bookmarks?: Bookmark[];
@@ -25,6 +26,7 @@ export interface PostData {
 
   createdAt: Date;
   updatedAt: Date;
+  deletedAt: Date | null;
 }
 
 export function getUserDataSelect() {

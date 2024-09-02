@@ -1,12 +1,12 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-import { moveToTrashPostAction } from "@/actions/posts/moveToTrashPostAction";
+import { bookmarkPostAction } from "@/actions/posts/bookmarkPostAction";
 
-export function useMoveToTrashPostMutation() {
+export function useSaveOrUnSaveBookmarkMutation() {
   const queryClient = useQueryClient();
 
   const mutation = useMutation({
-    mutationFn: moveToTrashPostAction,
+    mutationFn: bookmarkPostAction,
     onSuccess: async () => {
       queryClient.invalidateQueries({ queryKey: ["posts"] });
     },

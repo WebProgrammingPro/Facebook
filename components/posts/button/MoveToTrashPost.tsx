@@ -11,10 +11,10 @@ interface MoveToTrashPostProps {
 }
 
 const MoveToTrashPost = ({ data }: MoveToTrashPostProps) => {
-  const mutation = useMoveToTrashPostMutation();
+  const { mutate: mutation } = useMoveToTrashPostMutation();
 
   const onClick = () => {
-    mutation.mutate(data.id);
+    mutation(data.id);
   };
 
   return (

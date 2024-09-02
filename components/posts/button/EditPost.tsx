@@ -27,12 +27,12 @@ interface EditPostProps {
 }
 
 const EditPost = ({ post }: EditPostProps) => {
-  const { mutate: editPost } = useEditPostMutation();
+  const { mutate: mutation } = useEditPostMutation();
 
   const [open, setOpen] = useState(false);
 
   const handleEditPost = (values: FormInputPostValues) => {
-    editPost(values, {
+    mutation(values, {
       onSuccess: () => {
         setOpen(false);
       },

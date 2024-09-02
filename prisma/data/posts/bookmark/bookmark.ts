@@ -17,18 +17,3 @@ export const getBookmarkByPostId = async (postId: string) => {
     return null;
   }
 };
-
-export const getBookmarks = async () => {
-  const user = await currentUser();
-
-  try {
-    const bookmarks = await db.bookmark.findMany({
-      where: { userId: user?.id },
-      include: { user: true, post: true },
-    });
-
-    return bookmarks;
-  } catch (error) {
-    return null;
-  }
-};

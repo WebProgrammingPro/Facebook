@@ -1,13 +1,17 @@
 import { useQuery } from "@tanstack/react-query";
 
-import { Post } from "@prisma/client";
+import axios from "@/lib/axios";
 
-import { fetchPosts } from "@/prisma/data/posts/posts";
+const fetchPostsApi = async () => {
+  const response = await axios.get("/posts/for-you");
+
+  return response.data;
+};
 
 export default function useGetPostsQuery() {
-  const query = useQuery<Post[]>({
+  const query = useQuery({
     queryKey: ["posts"],
-    queryFn: fetchPosts,
+    queryFn: fetchPostsApi,
   });
 
   return query;

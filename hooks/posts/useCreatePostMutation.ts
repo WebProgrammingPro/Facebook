@@ -1,12 +1,20 @@
+import axios from "@/lib/axios";
+
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-import { CreatePostAction } from "@/actions/posts/CreatePostAction";
+import { FormInputPostValues } from "@/schemas";
+
+const createPostApi = async (values: FormInputPostValues) => {
+  const { data } = await axios.post("/posts", values);
+
+  return data;
+};
 
 export function useCreatePostMutation() {
   const queryClient = useQueryClient();
 
   const mutation = useMutation({
-    mutationFn: CreatePostAction,
+    mutationFn: createPostApi,
     onSuccess: async () => {
       queryClient.invalidateQueries({ queryKey: ["posts"] });
     },

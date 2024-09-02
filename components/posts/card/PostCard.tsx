@@ -1,13 +1,16 @@
 import { useState } from "react";
 
 import { PostData } from "@/lib/types";
+
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
+
 import HeaderPost from "../HeaderPost";
+import IsReadMorePage from "@/components/prefabs/page/IsReadMorePage";
 
 interface PostCardProps {
   post?: PostData;
@@ -40,7 +43,7 @@ const PostCard = ({ post }: PostCardProps) => {
           </CardHeader>
           <CardContent>
             <div>
-              <p className="whitespace-pre-wrap">{post.content}</p>
+              <IsReadMorePage post={post} />
             </div>
           </CardContent>
           <CardFooter>
