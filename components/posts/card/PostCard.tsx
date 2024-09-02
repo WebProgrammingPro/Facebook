@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { PostData } from "@/lib/types";
+import { PostData } from "@/lib/types/posts";
 
 import {
   Card,
@@ -11,6 +11,8 @@ import {
 
 import HeaderPost from "../HeaderPost";
 import IsReadMorePage from "@/components/prefabs/page/IsReadMorePage";
+import PostButton from "../PostButton";
+import CommentsFeed from "@/components/comments/CommentsFeed";
 
 interface PostCardProps {
   post?: PostData;
@@ -52,8 +54,8 @@ const PostCard = ({ post }: PostCardProps) => {
                 <span className="text-xs">{post._count?.likes} Likes</span>
                 <span className="text-xs">20 Comments</span>
               </div>
-              {/* <PostButton post={post} setShowComments={setShowComments} /> */}
-              {/* {showComments && <Comments post={post} />} */}
+              <PostButton post={post} setShowComments={setShowComments} />
+              {showComments && <CommentsFeed postId={post.id} />}
             </div>
           </CardFooter>
         </Card>

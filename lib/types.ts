@@ -1,5 +1,4 @@
-import { ExtendedUser } from "@/next-auth-d";
-import { Bookmark, Prisma } from "@prisma/client";
+import { Prisma } from "@prisma/client";
 
 export type AuthFlow = "SignIn" | "SignUp";
 
@@ -10,23 +9,6 @@ export interface AuthCard {
 export interface MessageTypes {
   error?: string;
   success?: string;
-}
-
-export interface PostData {
-  id: string;
-  audience: string;
-  content: string;
-  userId: string;
-  isTrashed: boolean;
-
-  user?: ExtendedUser;
-  bookmarks?: Bookmark[];
-  _count?: { likes: number };
-  isLikedByCurrentUser?: boolean;
-
-  createdAt: Date;
-  updatedAt: Date;
-  deletedAt: Date | null;
 }
 
 export function getUserDataSelect() {

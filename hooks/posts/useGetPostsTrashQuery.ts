@@ -2,8 +2,10 @@ import { useQuery } from "@tanstack/react-query";
 
 import axios from "@/lib/axios";
 
+import { PostData } from "@/lib/types/posts";
+
 const fetchPostsTrashApi = async () => {
-  const response = await axios.get("posts?isTrashed=true");
+  const response = await axios.get<PostData>("posts?isTrashed=true");
 
   return response;
 };

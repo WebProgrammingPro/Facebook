@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { FormInputPostSchema, FormInputPostValues } from "@/schemas";
 
 import { ExtendedUser } from "@/next-auth-d";
-import { PostData } from "@/lib/types";
+import { PostData } from "@/lib/types/posts";
 import { Audience } from "@prisma/client";
 
 import { Form } from "@/components/ui/form";

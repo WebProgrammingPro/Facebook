@@ -26,12 +26,12 @@ import { useCurrentUser } from "@/hooks/use-current-user";
 
 const CreatePost = () => {
   const userCurrent = useCurrentUser();
-  const { mutate: createPost } = useCreatePostMutation();
+  const { mutate: mutation } = useCreatePostMutation();
 
   const [open, setOpen] = useState(false);
 
   const handleCreatePost = (values: FormInputPostValues) => {
-    createPost(values, {
+    mutation(values, {
       onSuccess: () => {
         setOpen(false);
       },

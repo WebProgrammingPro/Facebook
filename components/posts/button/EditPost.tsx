@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useEditPostMutation } from "@/hooks/posts/useEditPostMutation";
 
 import { FormInputPostValues } from "@/schemas";
-import { PostData } from "@/lib/types";
+import { PostData } from "@/lib/types/posts";
 
 import {
   Dialog,

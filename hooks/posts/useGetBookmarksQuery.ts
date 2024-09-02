@@ -1,6 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 
-import { fetchBookmarks } from "@/actions/posts/fetch/fetchBookmarks";
+import axios from "@/lib/axios";
+
+import { BookmarksData } from "@/lib/types/bookmarks";
+
+const fetchBookmarks = async () => {
+  const { data } = await axios.get<BookmarksData[]>("/posts/bookmarks");
+
+  return data;
+};
 
 export default function useGetBookmarksQuery() {
   const query = useQuery({

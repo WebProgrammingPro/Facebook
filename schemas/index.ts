@@ -24,6 +24,7 @@ export const FormInputPostSchema = z.object({
 export type FormInputPostValues = z.infer<typeof FormInputPostSchema>;
 
 export const FormInputCommentSchema = z.object({
+  id: z.optional(z.string()),
   content: z.string().min(1, { message: "Comment Is Required" }),
   postId: z.string().min(1, { message: "Post ID Is Required" }),
 });

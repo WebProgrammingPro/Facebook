@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import { PostData } from "@/lib/types";
 import { formatRelativeDate } from "@/lib/utils";
+import { PostData } from "@/lib/types/posts";
 
 import Header from "../Header";
 import ImageAvatar from "../avatar/ImageAvatar";

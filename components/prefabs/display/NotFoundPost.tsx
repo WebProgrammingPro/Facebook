@@ -1,4 +1,4 @@
-import PostCard from "../card/PostCard";
+import PostCard from "@/components/posts/card/PostCard";
 
 const NotFoundPost = () => {
   return <PostCard />;

@@ -1,9 +1,12 @@
+import { cn } from "@/lib/utils";
+
 interface ContainerProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-const Container = ({ children }: ContainerProps) => {
-  return <div className="container m-auto">{children}</div>;
+const Container = ({ children, className }: ContainerProps) => {
+  return <div className={cn("container m-auto", className)}>{children}</div>;
 };
 
 export default Container;

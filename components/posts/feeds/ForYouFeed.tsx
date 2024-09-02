@@ -4,7 +4,7 @@ import useGetPostsQuery from "@/hooks/posts/useGetPostsQuery";
 
 import PostsLoadingSkeleton from "@/components/PostsLoadingSkeleton";
 import PostCard from "../card/PostCard";
-import NotFoundPost from "./NotFoundPost";
+import NotFoundPost from "@/components/prefabs/display/NotFoundPost";
 
 const ForYouFeed = () => {
   const { data, isLoading } = useGetPostsQuery();
