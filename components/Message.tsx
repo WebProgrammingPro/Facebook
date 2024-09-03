@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-import { MessageTypes } from "@/lib/types";
+import { MessageTypes } from "@/lib/types/types";
 
 import { Check, CircleAlert } from "lucide-react";
 

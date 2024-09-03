@@ -3,8 +3,7 @@
 import useGetPostsQuery from "@/hooks/posts/useGetPostsQuery";
 
 import PostsLoadingSkeleton from "@/components/PostsLoadingSkeleton";
-import PostCard from "../card/PostCard";
-import NotFoundPost from "@/components/prefabs/display/NotFoundPost";
+import { PostCard } from "./PostCard";
 
 const ForYouFeed = () => {
   const { data, isLoading } = useGetPostsQuery();
@@ -24,7 +23,7 @@ const ForYouFeed = () => {
       {data?.length ? (
         data.map((post) => <PostCard key={post.id} post={post} />)
       ) : (
-        <NotFoundPost />
+        <PostCard />
       )}
     </div>
   );

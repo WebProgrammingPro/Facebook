@@ -1,6 +1,6 @@
 import { useMoveToTrashPostMutation } from "@/hooks/posts/useMoveToTrashPostMutation";
 
-import { PostData } from "@/lib/types";
+import { PostData } from "@/lib/types/posts";
 
 import { Trash2 } from "lucide-react";
 

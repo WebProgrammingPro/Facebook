@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { AuthFlow } from "@/lib/types";
+import { AuthFlow } from "@/lib/types/types";
 
 import SignInForm from "./form/SignInForm";
 import SignUpForm from "./form/SignUpForm";

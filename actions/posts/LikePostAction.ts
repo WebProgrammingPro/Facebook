@@ -1,6 +1,6 @@
 "use server";
 
-import { PostData } from "@/lib/types";
+import { PostData } from "@/lib/types/types";
 
 import { currentUser } from "@/lib/auth";
 import { db } from "@/lib/db";

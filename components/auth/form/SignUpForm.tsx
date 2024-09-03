@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { useSignUpMutation } from "@/hooks/auth/useSignUpMutation";
 
-import { AuthCard } from "@/lib/types";
+import { AuthCard } from "@/lib/types/types";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";

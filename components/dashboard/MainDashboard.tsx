@@ -4,7 +4,7 @@ import SidebarRight from "../Sidebar/SidebarRight";
 import Center from "../Center";
 import MainPost from "../MainPost";
 import CreatePost from "../posts/button/CreatePost";
-import ForYouFeed from "../posts/feeds/ForYouFeed";
+import ForYouFeed from "../posts/ForYouFeed";
 
 const MainDashboard = () => {
   return (

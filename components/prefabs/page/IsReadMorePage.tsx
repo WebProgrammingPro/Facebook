@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { PostData } from "@/lib/types";
+import { PostData } from "@/lib/types/types";
 
 interface isReadMoreProps {
   post: PostData;

@@ -20,7 +20,7 @@ import {
 import CardWrapper from "@/components/CardWrapper";
 import ImageAvatar from "@/components/avatar/ImageAvatar";
 import Header from "@/components/Header";
-import FormPost from "../form/FormPost";
+import FormPost from "../FormPost";
 
 import { useCurrentUser } from "@/hooks/use-current-user";
 

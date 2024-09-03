@@ -7,8 +7,8 @@ export default function PostsLoadingSkeleton() {
 
 function PostLoadingSkeleton() {
   return (
-    <Card className="p-3">
-      <div className="flex flex-wrap gap-3">
+    <Card className="space-y-2 p-3">
+      <div className="flex flex-wrap gap-2">
         <Skeleton className="size-12 rounded-full" />
         <div className="space-y-1.5">
           <Skeleton className="h-4 w-24 rounded" />

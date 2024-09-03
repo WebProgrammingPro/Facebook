@@ -1,6 +1,6 @@
 import { useSaveOrUnSaveBookmarkMutation } from "@/hooks/posts/useSaveOrUnSaveBookmarkMutation";
 
-import { PostData } from "@/lib/types";
+import { PostData } from "@/lib/types/types";
 
 import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
 

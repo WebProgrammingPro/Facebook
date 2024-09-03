@@ -1,4 +1,4 @@
-import { getPostDataInclude } from "@/lib/types";
+import { getPostDataInclude } from "@/lib/types/types";
 
 import { currentUser } from "@/lib/auth";
 import { db } from "@/lib/db";

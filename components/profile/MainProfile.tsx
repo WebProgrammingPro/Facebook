@@ -12,8 +12,8 @@ import { onlyUser } from "@/lib/auth";
 import { getUserById } from "@/prisma/data/user";
 import MainFriends from "./MainFriends";
 import CreatePost from "../posts/button/CreatePost";
-import ForYouFeed from "../posts/feeds/ForYouFeed";
 import ManagerFriendRequestButton from "./ManagerFriendRequest/ManagerFriendRequestButton";
+import ForYouFeed from "../posts/ForYouFeed";
 
 interface MainProfileProps {
   params: { userId: string };

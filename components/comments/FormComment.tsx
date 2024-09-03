@@ -1,11 +1,9 @@
 "use client";
 
 import { SubmitHandler, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { FormInputCommentSchema, FormInputCommentValues } from "@/schemas";
 
 import { ExtendedUser } from "@/next-auth-d";
-import { CommentData } from "@/lib/types/cooments";
+import { FormInputCommentValues } from "@/schemas";
 
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -18,23 +16,10 @@ interface FormCommentProps {
   user?: ExtendedUser;
   onSubmit: SubmitHandler<FormInputCommentValues>;
   isEditing: boolean;
-  initialValue?: CommentData | { postId: string };
+  form: any;
 }
 
-const FormComment = ({
-  user,
-  onSubmit,
-  isEditing,
-  initialValue,
-}: FormCommentProps) => {
-  const form = useForm<FormInputCommentValues>({
-    resolver: zodResolver(FormInputCommentSchema),
-    defaultValues: {
-      content: initialValue?.content || "",
-      postId: initialValue?.postId || "",
-    },
-  });
-
+const FormComment = ({ user, onSubmit, isEditing, form }: FormCommentProps) => {
   return (
     <Form {...form}>
       <form className="w-full" onSubmit={form.handleSubmit(onSubmit)}>

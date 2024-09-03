@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 import { ExtendedUser } from "@/next-auth-d";
 
 import { formatRelative } from "date-fns";
-import { PostData } from "./types";
+import { PostData } from "./types/types";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

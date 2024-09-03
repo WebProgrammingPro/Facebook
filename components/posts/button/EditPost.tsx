@@ -20,7 +20,7 @@ import { DropdownMenu, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { Pencil } from "lucide-react";
 
 import Header from "@/components/Header";
-import FormPost from "../form/FormPost";
+import FormPost from "../FormPost";
 
 interface EditPostProps {
   post: PostData;
