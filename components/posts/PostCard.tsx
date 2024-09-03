@@ -90,7 +90,7 @@ export const PostCard = ({ post }: PostCardProps) => {
               <div className="flex flex-col gap-2 flex-1">
                 <div className="flex flex-row justify-between pb-2 border-b">
                   <span className="text-xs">{post._count?.likes} Likes</span>
-                  <span className="text-xs">20 Comments</span>
+                  <span className="text-xs">{post._count?.comments} Comments</span>
                 </div>
                 <PostCard.Buttons setShowComments={setShowComments} />
                 {showComments && <Comments post={post} />}

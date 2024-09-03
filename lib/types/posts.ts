@@ -10,7 +10,10 @@ export interface PostData {
 
   user?: ExtendedUser;
   bookmarks?: BookmarksData[];
-  _count?: { likes: number };
+  _count?: {
+    likes: number;
+    comments: number;
+  };
   isLikedByCurrentUser?: boolean;
 
   createdAt: Date;
