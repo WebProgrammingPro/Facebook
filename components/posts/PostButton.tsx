@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 
 import ButtonClick from "../ButtonClick";
 import { PostData } from "@/lib/types/posts";
+import { useLikePostMutation } from "@/hooks/posts/useLikePostMutation";
 
 interface PostButtonProps {
   post: PostData;
@@ -11,7 +12,11 @@ interface PostButtonProps {
 }
 
 const PostButton = ({ post, setShowComments }: PostButtonProps) => {
-  const onClickLike = () => {};
+  const { mutate: mutation } = useLikePostMutation();
+
+  const onClickLike = () => {
+    mutation(post);
+  };
 
   return (
     <div className="flex flex-row flex-1">

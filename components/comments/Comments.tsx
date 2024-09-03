@@ -8,12 +8,13 @@ import { useCurrentUser } from "@/hooks/use-current-user";
 import CommentCard from "./card/CommentCard";
 import ImageAvatar from "@/components/avatar/ImageAvatar";
 import FormComment from "./form/FormComment";
+import CommentFeed from "./feed/CommentFeed";
 
 interface CommentsFeedProps {
   post: PostData;
 }
 
-const CommentsFeed = ({ post }: CommentsFeedProps) => {
+const Comments = ({ post }: CommentsFeedProps) => {
   const userCurrent = useCurrentUser();
   const { mutate: mutation } = useCreateCommentMutation();
 
@@ -35,10 +36,10 @@ const CommentsFeed = ({ post }: CommentsFeedProps) => {
         </div>
       </div>
       <div className="space-y-4">
-        <CommentCard />
+        <CommentFeed />
       </div>
     </div>
   );
 };
 
-export default CommentsFeed;
+export default Comments;

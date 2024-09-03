@@ -12,7 +12,7 @@ import {
 import HeaderPost from "../HeaderPost";
 import IsReadMorePage from "@/components/prefabs/page/IsReadMorePage";
 import PostButton from "../PostButton";
-import CommentsFeed from "@/components/comments/CommentsFeed";
+import Comments from "@/components/comments/Comments";
 
 interface PostCardProps {
   post?: PostData;
@@ -55,7 +55,7 @@ const PostCard = ({ post }: PostCardProps) => {
                 <span className="text-xs">20 Comments</span>
               </div>
               <PostButton post={post} setShowComments={setShowComments} />
-              {showComments && <CommentsFeed post={post} />}
+              {showComments && <Comments post={post} />}
             </div>
           </CardFooter>
         </Card>
